@@ -15,7 +15,7 @@ def get_Nobel_soup():
 
     # Make a request to the Nobel page, setting valid headers
     response = requests.get(
-    BASE_URL + '/wiki/List_of_Nobel_laureates', headers=HEADERS)
+        BASE_URL + '/wiki/List_of_Nobel_laureates', headers=HEADERS)
 
     # Return the content of the response parsed by BeautifulSoup
     return BeautifulSoup(response.content, 'html.parser')
@@ -63,6 +63,7 @@ winners = get_Nobel_winners(wikitable)
 
 def get_winner_nationality(w):
     """ scrape biographic data from the winner's wikipedia page """
+    
     data = requests.get('http://en.wikipedia.org' + w['link'])
     soup = BeautifulSoup(data.content, 'html.parser')
     person_data = {'name': w['name']}

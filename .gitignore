@@ -108,3 +108,7 @@ venv.bak/
 
 # requests_cache
 cache.*
+
+#scrapy
+ch6/nobel_winners/images/
+ch6/nobel_winners/*.json

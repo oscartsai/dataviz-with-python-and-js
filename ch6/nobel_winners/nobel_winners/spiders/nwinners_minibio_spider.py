@@ -1,7 +1,7 @@
 import scrapy
 import re
 
-BASE_URL = 'http://en.wikipedia.org'
+BASE_URL = 'https://en.wikipedia.org'
 
 
 class NWinnerItemBio(scrapy.Item):
